@@ -1,0 +1,149 @@
+@charset "UTF-8";
+@font-face {
+    font-family: "Font-Awesome";
+    font-style: normal;
+    font-weight: normal;
+    src: url(../fonts/fa-brands-400.eot);
+    src: url(../fonts/fa-brands-400.eot?#iefix) format("embedded-opentype"), url(../fonts/fa-brands-400.woff2) format("woff2"), url(../fonts/fa-brands-400.woff) format("woff"), url(../fonts/fa-brands-400.ttf) format("truetype"), url(../fonts/fa-brands-400.svg#fontawesome) format("svg")
+}
+
+.fab {
+    font-family: "Font-Awesome"
+}
+
+@font-face {
+    font-family: "Font-Awesome";
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/fa-regular-400.eot);
+    src: url(../fonts/fa-regular-400.eot?#iefix) format("embedded-opentype"), url(../fonts/fa-regular-400.woff2) format("woff2"), url(../fonts/fa-regular-400.woff) format("woff"), url(../fonts/fa-regular-400.ttf) format("truetype"), url(../fonts/fa-regular-400.svg#fontawesome) format("svg")
+}
+
+.far {
+    font-weight: 400
+}
+
+@font-face {
+    font-family: "Font-Awesome";
+    font-style: normal;
+    font-weight: 900;
+    src: url(../fonts/fa-solid-900.eot);
+    src: url(../fonts/fa-solid-900.eot?#iefix) format("embedded-opentype"), url(../fonts/fa-solid-900.woff2) format("woff2"), url(../fonts/fa-solid-900.woff) format("woff"), url(../fonts/fa-solid-900.ttf) format("truetype"), url(../fonts/fa-solid-900.svg#fontawesome) format("svg")
+}
+
+.fa{
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1
+}
+.fa,
+.far,
+.fas {
+    font-family: "Font-Awesome";
+}
+
+.fa,
+.fas {
+    font-weight: 900;
+}
+.fa-phone:before {
+    content: "\f095";
+}
+.fa-home:before {
+    content: "\f015";
+}
+.fa-envelope:before {
+    content: "\f0e0";
+}
+.fa-facebook-f:before {
+    content: "\f39e";
+}
+.fa-twitter:before {
+    content: "\f099";
+}
+.fa-google-plus-g:before {
+    content: "\f0d5";
+}
+.fa-search:before {
+    content: "\f002";
+}
+.fa-angle-left:before {
+    content: "\f104";
+}
+.fa-angle-right:before {
+    content: "\f105";
+}
+.fa-heart:before {
+    content: "\f004";
+}
+.fa-user:before {
+    content: "\f007";
+}
+.fa-comment-alt:before {
+    content: "\f27a";
+}
+.fa-user:before {
+    content: "\f007";
+}
+.fa-paper-plane:before {
+    content: "\f1d8";
+}
+.fa-image:before {
+    content: "\f03e";
+}
+.fa-angle-double-right:before {
+    content: "\f101";
+}
+.fa-plus:before {
+    content: "\f067";
+}
+.fa-minus:before {
+    content: "\f068";
+}
+
+
+    /*
+    Flaticon icon font: Flaticon
+    Creation date: 17/07/2018 12:45
+    */
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("../fonts/Flaticon.eot");
+  src: url("../fonts/Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("../fonts/Flaticon.woff") format("woff"),
+       url("../fonts/Flaticon.ttf") format("truetype"),
+       url("../fonts/Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("../fonts/Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+  font-family: Flaticon;
+        font-size: 20px;
+font-style: normal;
+margin-left: 20px;
+}
+
+.flaticon-woman-hair:before { content: "\f100"; }
+.flaticon-hand-mirror-1:before { content: "\f101"; }
+.flaticon-hand-mirror:before { content: "\f102"; }
+.flaticon-scissors-2:before { content: "\f103"; }
+.flaticon-scissors:before { content: "\f104"; }
+.flaticon-hair-style-silhouette:before { content: "\f105"; }
+.flaticon-female-head-silhouette-with-ponytail:before { content: "\f106"; }
+.flaticon-male-short-hair-wig-shape:before { content: "\f107"; }
+.flaticon-angle-pointing-to-left:before { content: "\f108"; }
+.flaticon-angle-arrow-pointing-to-right:before { content: "\f109"; }
