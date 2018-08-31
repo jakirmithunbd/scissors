@@ -86,6 +86,9 @@ textarea {
 		outline: 0;
 	}
 }
+.media {
+	margin-top: 0;
+}
 /* =========== Import Mixin =============*/
 @import 'icon';
 @import 'mixin';
@@ -595,9 +598,10 @@ textarea {
 }
 /* =========== Blog CSS =============*/
 .blog {
+	padding: 120px 0 70px;
 
 	.post {
-		margin: 50px 0 0;
+		margin: 0 0 50px;
 
 		.media {
 			@include transition(all .5s ease);
@@ -655,6 +659,27 @@ textarea {
 				}
 			}
 
+			.date-cat {
+
+				ul {
+					margin: 5px 0 15px;
+
+					li {
+						padding: 0 20px;
+
+						&:first-child {
+							padding-left: 5px;
+						}
+
+						&+li {
+							border-left: 1px solid $primary;
+							line-height: 20px;
+							margin-left: -2px;
+						}
+					}
+				}
+			}
+
 			.post-meta {
 				padding: 8px 0;
 
@@ -667,6 +692,10 @@ textarea {
 							font-size: 12px;
 							color: #777777;
 							@include transition(all .5s ease);
+
+							span {
+								color: $primary;
+							}
 
 							&:hover, &:focus {
 								color: $primary;
@@ -850,6 +879,46 @@ textarea {
 		}
 	}
 }
+.pagination-wrap {
+	margin-top: 40px;
+
+	ul {
+
+		li {
+
+			a {
+				font-size: 16px;
+				background: $white;
+				color: #cccccc;
+				height: 37px;
+				width: 37px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border: 1px solid #cccccc;
+				margin: 0 5px;
+				border-radius: 0;
+				transition: all .5s ease;
+			}
+
+			&.active, &:hover, &:focus {
+
+				a {
+					background: $primary;
+					color: $white;
+					border: 0;
+				}
+			}
+
+			&:first-child, &:last-child {
+
+				a {
+					border-radius: 0;
+				}
+			}
+		}
+	}
+}
 /* =========== Blog page CSS =============*/
 .blog-page {
 
@@ -873,6 +942,327 @@ textarea {
 				}
 			}
 		}
+	}
+
+	.sidebar {
+		border: 1px solid #ebebeb;
+		padding: 35px;
+
+		.search-form {
+
+			label {
+				color: #333333;
+				font-size: 16px;
+				text-transform: uppercase;
+				margin-bottom: 20px;
+				font-weight: 400;
+				@include letter-spacing(26, 40);
+			}
+
+			.input-group {
+
+				.form-control {
+					height: 50px;
+					border-radius: 0;
+					box-shadow: none;
+					padding-left: 25px !important;
+					border-color: #ebebeb;
+					font-style: italic;
+					color: #ebebeb;
+
+					&:focus {
+						border-color: #ebebeb;
+					}
+				}
+
+				.input-group-btn {
+
+					.btn {
+						width: 43px;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						box-shadow: none;
+
+						span {
+							font-size: 17px;
+						}
+					}
+				}
+			}
+		}
+
+		.sidebar-item {
+			margin: 60px 0 0;
+
+			.title {
+				margin: 0 0 20px;
+
+				h5 {
+					font-weight: 400;
+					color: #333333;
+					@include letter-spacing(26,40);
+					font-size: 14px;
+					text-transform: uppercase;
+				}
+			}
+
+			.category {
+
+				ul {
+
+					li {
+
+						span {
+							float: right;
+						}
+
+						a {
+							color: #777777;
+							font-size: 13px;
+							line-height: 26px;
+							@letter-spacing(26, 40);
+							transition: all .5s ease;
+
+							&:hover, &:focus {
+								color: $primary;
+							}
+
+							span {
+								margin-right: 5px;
+								float: none;
+							}
+						}
+
+						&:hover, &:focus {
+							
+							span {
+								color: $primary;
+							}
+						}
+					}
+				}
+			}
+
+			.recent-post-item {
+				margin: 0 0 35px;
+
+				.media {
+					height: 70px;
+					width: 70px;
+					border-radius: 500px;
+					float: left;
+					margin-right: 15px;
+					position: relative;
+					margin-top: 0;
+
+					.link {
+						position: absolute;
+						content: "";
+						height: 100%;
+						width: 100%;
+						background: $primary;
+						top: 0;
+						left: 0;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						color: $white;
+						opacity: 0;
+						transition: all .3s ease;
+					}
+
+					&:hover, &:focus {
+
+						.link {
+							opacity: 1;
+						}
+					}
+				}
+
+				.post-meta {
+
+					a {
+						color: #777777;
+						font-size: 13px;
+						line-height: 26px;
+						@letter-spacing(26, 40);
+						transition: all .5s ease;
+
+						&:hover, &:focus {
+							color: $primary;
+						}
+					}
+
+					p {
+						font-size: 13px;
+						line-height: 26px;
+						@letter-spacing(26, 40);
+						transition: all .5s ease;
+						color: $primary;
+					}
+				}
+			}
+
+			.tag {
+
+				ul {
+					font-size: 0;
+
+					li {
+						padding: 5px;
+
+						a {
+							color: #777777;
+							font-size: 13px;
+							line-height: 26px;
+							@letter-spacing(26, 40);
+							transition: all .5s ease;
+							border: 1px solid #cccccc;
+							padding: 3px 17px;
+							display: block;
+
+							&:hover, &:focus {
+								background: $primary;
+								border-color: $primary;
+								color: $white;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+/* =========== Blog single page =============*/
+.author {
+
+	h4 {
+		color: #333333;
+		font-size: 18px;
+		line-height: 26px;
+		@letter-spacing(26, 40);
+		transition: all .5s ease;
+		text-transform: uppercase;
+		margin-bottom: 25px;
+	}
+
+	.media {
+		height: 90px;
+		width: 90px;
+		float: left;
+		margin-right: 30px;
+	}
+
+	.author-info {
+
+		ul {
+			font-size: 0;
+
+			li {
+				@letter-spacing(26, 40);
+				color: #333333;
+				font-size: 15px;
+				line-height: 26px;
+				padding: 0 20px;
+
+				&:first-child {
+					padding-left: 0;
+				}
+
+				&+li {
+					position: relative;
+
+					&:before {
+						background: #333;
+						width: 1px;
+						height: 15px;
+						top: calc(50% - 7px);
+						left: 0;
+						transform: rotate(15deg);
+						position: absolute;
+						content: "";
+					}
+				}
+			}
+		}
+	}
+}
+/* =========== Gallery page =============*/
+.gallery {
+
+	.gallery-items {
+		margin: 60px 0 0;
+		display: grid;
+	    grid-template-columns: repeat(auto-fit, minmax(33%, 1fr));
+	    grid-gap: 3px;
+
+	    .item {
+	    	position: relative;
+
+	    	&:before {
+	    		position: absolute;
+	    		content: "";
+	    		top: 0;
+	    		left: 0;
+	    		height: 100%;
+	    		width: 100%;
+	    		background: #3e3e3e;
+	    		opacity: .4;
+	    	}
+
+	    	.media {
+	    		position: relative;
+	    		text-align: center;
+
+	    		.gallery-info {
+	    			position: absolute;
+	    			content: "";
+	    			top: 0;
+	    			left: 0;
+	    			height: 100%;
+	    			width: 100%;
+	    			background: #3e3e3e;
+	    			padding: 25px;
+	    			transform: scale(0) rotate(45deg);
+	    			transition: all .5s ease;
+
+	    			.icon {
+	    				height: 45px;
+	    				width: 45px;
+	    				background: $primary;
+	    				color: $white;
+	    				display: flex;
+	    				align-items: center;
+	    				justify-content: center;
+	    				border-radius: 500px;
+	    				margin: 0 auto 10px;
+	    			}
+
+	    			.title {
+	    				font-size: 18px;
+	    				@include letter-spacing(26, 40);
+	    				text-transform: uppercase;
+	    				font-weight: 700;
+	    				color: $white;
+	    			}
+
+	    			p {
+	    				color: $white;
+	    			}
+	    		}
+	    	}
+
+	    	&:hover, &:focus {
+
+	    		.media {
+
+	    			.gallery-info {
+	    				transform: scale(1) rotate(0);
+	    			}
+	    		}
+	    	}
+	    }
 	}
 }
 /* =========== Testimonials CSS =============*/
