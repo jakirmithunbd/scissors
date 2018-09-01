@@ -205,6 +205,13 @@ textarea {
 	    border-top: 2px dotted $primary;
 	}
 }
+.media {
+
+	img {
+		max-width: 100%;
+		width: 100%;
+	}
+}
 /* =========== Section Title =============*/
 
 .section-title {
@@ -1263,6 +1270,193 @@ textarea {
 	    		}
 	    	}
 	    }
+	}
+}
+/* =========== Gallery single CSS =============*/
+.gallery-single {
+	padding-bottom: 0;
+
+	.gallery-slider {
+		margin: 0 0 15px;
+
+		.slick-prev:before, .slick-next:before {
+			font-family: 'FontAwesome';
+			color: #333333;
+			font-size: 18px;
+			height: 35px;
+			width: 35px;
+			border-radius: 500px;
+			border: 2px solid #333333;
+			display: flex;
+		    align-items: center;
+		    justify-content: center;
+		    font-weight: 900;
+		}
+		
+		.slick-prev {
+			left: 20px;
+    		z-index: 9;
+
+			&:before {
+				content: "\f104";
+			}
+		}
+
+		.slick-next {
+			right: 34px;
+
+			&:before {
+				content: "\f105";
+			}
+		}
+	}
+
+	.gallery-slider-nav {
+		margin-left: -10px;
+		margin-right: -10px;
+		
+		.media {
+			padding: 10px;
+		}
+	}
+
+	.description {
+		margin: 30px 0 0;
+		border-bottom: 1px solid #ebebeb;
+
+		h5 {
+			font-size: 20px;
+			line-height: 26px;
+			color: #333333;
+			@letter-spacing(26, 40);
+			text-transform: uppercase;
+			font-weight: 500;
+			margin: 0 0 15px;
+    		display: block;
+		}
+
+		p {
+			margin: 0 0 55px;
+		}
+	}
+
+	.gallery-details {
+
+		h5 {
+			font-size: 20px;
+			line-height: 26px;
+			color: #333333;
+			@include letter-spacing(26, 40);
+			text-transform: uppercase;
+		}
+
+		.details-item {
+
+			table {
+
+				tr {
+					
+					td {
+						font-size: 14px;
+						line-height: 26px;
+						color: #666666;
+						@include letter-spacing(26, 40);
+						border: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+// related gallery slider
+.related-gallery {
+	padding: 100px 0;
+
+	.title {
+		margin: 0 0 20px;
+
+		h5 {
+			font-size: 20px;
+			line-height: 26px;
+			color: #333333;
+			@letter-spacing(26, 40);
+			text-transform: uppercase;
+			font-weight: 500;
+			margin: 0 0 5px;
+    		display: block;
+		}
+	}
+
+	.arrow {
+
+		ul {
+			font-size: 0;
+
+			li {
+				height: 35px;
+				width: 45px;
+				padding: 0;
+				background: $primary;
+				cursor: pointer;
+
+				&+li {
+					border-left: 1px solid $white;
+				}
+
+				span {
+					height: 35px;
+					width: 45px;
+					color: $white;
+					font-size: 18px;
+					text-align: center;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
+			}
+		}
+	}
+	.related-gallery-slider {
+		
+		.media {
+			position: relative;
+
+			.link {
+				position: absolute;
+				height: 100%;
+				width: 100%;
+				content: '';
+				background: rgba(208,208,208,.6);
+				top: 0;
+				left: 0;
+				opacity: 0;
+				transition: all .5s ease;
+				transform: scale(0);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				span {
+					height: 45px;
+					width: 45px;
+					color: $white;
+					border-radius: 500px;
+					background: $primary;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
+			}
+
+			&:hover, &:focus {
+				
+				.link {
+					transform: scale(1);
+					opacity: 1;
+				}
+			}
+		}
 	}
 }
 /* =========== Testimonials CSS =============*/
