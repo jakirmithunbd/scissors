@@ -2595,7 +2595,15 @@ textarea {
   font-size: 15px;
   letter-spacing: 0.91px;
   color: #333;
-  max-width: 640px; }
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto; }
+
+.no-padding-right {
+  padding-right: 0 !important; }
+
+.no-padding-left {
+  padding-left: 0 !important; }
 
 /* =========== Header CSS =============*/
 .header {
@@ -3525,6 +3533,90 @@ textarea {
       -ms-transform: scale(1);
       transform: scale(1);
       opacity: 1; }
+
+/* =========== Services css =============*/
+.services {
+  position: relative; }
+  .services:before {
+    background: url("../images/service-bg.png");
+    background-repeat: no-repeat;
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: -65%;
+    height: 100%;
+    width: 100%; }
+  .services .section-title {
+    margin: 0 0 40px; }
+  .services .service {
+    margin: 0 0 60px; }
+    .services .service .media {
+      margin-left: 20px;
+      height: 100px;
+      width: 100px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      border: 1px solid #d0d0d0;
+      border-radius: 500px; }
+      .services .service .media img {
+        width: auto; }
+    .services .service .content {
+      overflow: hidden; }
+      .services .service .content h5 {
+        font-size: 18px;
+        line-height: 26px;
+        color: #333333;
+        letter-spacing: 0.48px;
+        text-transform: uppercase;
+        margin: 0 0 25px; }
+  .services .right-service .media {
+    margin-left: 0;
+    margin-right: 20px; }
+
+.trendy-plans .section-title {
+  margin: 0 0 60px; }
+
+.trendy-plans .trendy-plan ul.nav-tabs {
+  border-color: #d3d3d3; }
+  .trendy-plans .trendy-plan ul.nav-tabs li {
+    width: 100%; }
+    .trendy-plans .trendy-plan ul.nav-tabs li a {
+      border-color: #d3d3d3;
+      font-size: 18px;
+      color: #333333;
+      border-radius: 0;
+      line-height: 24px;
+      margin: 0;
+      font-weight: 600;
+      padding: 26px 30px;
+      letter-spacing: 0.96px;
+      position: relative; }
+      .trendy-plans .trendy-plan ul.nav-tabs li a span {
+        font-size: 13px;
+        color: #777777;
+        display: block;
+        font-weight: 400;
+        margin: 10px 0 0; }
+      .trendy-plans .trendy-plan ul.nav-tabs li a:before {
+        position: absolute;
+        content: "";
+        height: 100%;
+        width: 3px;
+        background: #bf9456;
+        left: -1px;
+        top: 0;
+        opacity: 0; }
+    .trendy-plans .trendy-plan ul.nav-tabs li.active a, .trendy-plans .trendy-plan ul.nav-tabs li:hover a, .trendy-plans .trendy-plan ul.nav-tabs li:focus a {
+      background: transparent; }
+      .trendy-plans .trendy-plan ul.nav-tabs li.active a:before, .trendy-plans .trendy-plan ul.nav-tabs li:hover a:before, .trendy-plans .trendy-plan ul.nav-tabs li:focus a:before {
+        opacity: 1; }
 
 /* =========== Testimonials CSS =============*/
 .testimonials {

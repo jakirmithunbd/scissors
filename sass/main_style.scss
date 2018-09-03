@@ -228,7 +228,16 @@ textarea {
 		@include letter-spacing(26, 35);
 		color: #333;
 		max-width: 640px;
+		margin-left: auto;
+		margin-right: auto;
 	}
+}
+
+.no-padding-right {
+	padding-right: 0 !important;
+}
+.no-padding-left {
+	padding-left: 0 !important;
 }
 
 /* =========== Header CSS =============*/
@@ -1454,6 +1463,126 @@ textarea {
 				.link {
 					transform: scale(1);
 					opacity: 1;
+				}
+			}
+		}
+	}
+}
+/* =========== Services css =============*/
+.services {
+	position: relative;
+
+	&:before {
+		background: url('../images/service-bg.png');
+		background-repeat: no-repeat;
+		position: absolute;
+		content: "";
+		left: 0;
+		bottom: -65%;
+		height: 100%;
+		width: 100%;
+	}
+
+	.section-title {
+		margin: 0 0 40px;
+	}
+
+	.service {
+		margin: 0 0 60px;
+
+		.media {
+			margin-left: 20px;
+			height: 100px;
+			width: 100px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border: 1px solid #d0d0d0;
+			border-radius: 500px;
+
+			img {
+				width: auto;
+			}
+		}
+
+		.content {
+			overflow: hidden;
+
+			h5 {
+				font-size: 18px;
+				line-height: 26px;
+				color: #333333;
+				@include letter-spacing(24,20);
+				text-transform: uppercase;
+				margin: 0 0 25px;
+			}
+		}
+	}
+
+	.right-service {
+
+		.media {
+			margin-left: 0;
+			margin-right: 20px;
+		}
+	}
+}
+
+.trendy-plans {
+
+	.section-title {
+		margin: 0 0 60px;;
+	}
+
+	.trendy-plan {
+
+		ul.nav-tabs {
+			border-color: #d3d3d3;
+			
+			li {
+				width: 100%;
+
+				a {
+					border-color: #d3d3d3;
+					font-size: 18px;
+					color: #333333;
+					border-radius: 0;
+					line-height: 24px;
+					margin: 0;
+					font-weight: 600;
+					padding: 26px 30px;
+					@include letter-spacing(24,40);
+					position: relative;
+
+					span {
+						font-size: 13px;
+						color: #777777;
+						display: block;
+						font-weight: 400;
+						margin: 10px 0 0;
+					}
+
+					&:before {
+						position: absolute;
+						content: "";
+						height: 100%;
+						width: 3px;
+						background: $primary;
+						left: -1px;
+						top: 0;
+						opacity: 0;
+					}
+				}
+
+				&.active, &:hover, &:focus {
+
+					a {
+						background: transparent;
+
+						&:before {
+							opacity: 1;
+						}
+					}
 				}
 			}
 		}
