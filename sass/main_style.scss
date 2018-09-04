@@ -215,6 +215,7 @@ textarea {
 /* =========== Section Title =============*/
 
 .section-title {
+	margin: 0 0 40px;
 
 	h3{
 		text-transform: uppercase;
@@ -513,7 +514,7 @@ textarea {
 	}
 
 	&:hover .slick-next {
-		right: 20px;
+		right: 40px;
 		opacity: 1;
 	} 
 	.slick-prev {

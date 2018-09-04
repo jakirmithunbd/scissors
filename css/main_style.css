@@ -2585,19 +2585,20 @@ textarea {
   width: 100%; }
 
 /* =========== Section Title =============*/
-.section-title h3 {
-  text-transform: uppercase;
-  color: #000000;
-  letter-spacing: 0.52px;
-  font-weight: 700; }
-
-.section-title p {
-  font-size: 15px;
-  letter-spacing: 0.91px;
-  color: #333;
-  max-width: 640px;
-  margin-left: auto;
-  margin-right: auto; }
+.section-title {
+  margin: 0 0 40px; }
+  .section-title h3 {
+    text-transform: uppercase;
+    color: #000000;
+    letter-spacing: 0.52px;
+    font-weight: 700; }
+  .section-title p {
+    font-size: 15px;
+    letter-spacing: 0.91px;
+    color: #333;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto; }
 
 .no-padding-right {
   padding-right: 0 !important; }
@@ -2809,7 +2810,7 @@ textarea {
       .banner .slick-dots li.slick-active button:before {
         background-color: #bf9456; }
   .banner:hover .slick-next {
-    right: 20px;
+    right: 40px;
     opacity: 1; }
   .banner .slick-prev {
     left: -40px; }
